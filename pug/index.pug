@@ -1,0 +1,26 @@
+- const className = ['ahmed','samir'];
+doctype html
+html(lang="en")
+	head
+		title this is css in js test
+		include ./header-meta.pug
+		include ./style.pug
+	body
+		div= `<=>`
+		form(
+			method="POST",
+			action="upload",
+			enctype="multipart/form-data",
+			name="uploadForm",
+			class=`${className.map((e)=>`${e}s`).join(' ')} work`
+			)
+			label(
+				style={'display':'block','color':'red','--size':100}
+				)
+				input(type="file", placeholder="uploade file", name="file", value="")/
+			label
+				input(type="submit", value="upload", name="upload")/
+			
+
+
+
