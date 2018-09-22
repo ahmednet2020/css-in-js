@@ -1,25 +1,25 @@
-- const className = ['ahmed','samir'];
+include var.js
+mixin divx(x)
+	-for(let i = 0; i <= 5; i++)
+		div.ahmed= `${x} wow ${i}`
 doctype html
 html(lang="en")
-	head
-		title this is css in js test
-		include ./header-meta.pug
-		include ./style.pug
+	include ./header
 	body
-		div= `<=>`
+		+divx('lol')
 		form(
 			method="POST",
 			action="upload",
 			enctype="multipart/form-data",
-			name="uploadForm",
-			class=`${className.map((e)=>`${e}s`).join(' ')} work`
+			name="uploadForm"
 			)
 			label(
-				style={'display':'block','color':'red','--size':100}
+				style=size
 				)
 				input(type="file", placeholder="uploade file", name="file", value="")/
 			label
 				input(type="submit", value="upload", name="upload")/
+		script(src='./js/main.js', type='text/javascript')
 			
 
 

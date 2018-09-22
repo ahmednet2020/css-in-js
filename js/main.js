@@ -1,6 +1,8 @@
 //var in sass
 let mainColor ="#ff0";
 let sliderNumber = 1;
+let sw = document.querySelector(".sw");
+let swRef = document.querySelector("#sw");
 //style element in html ref
 let sliderStyle = document.head.appendChild(document.createElement('style'));
 let buttonStyle = document.head.appendChild(document.createElement('style'));
@@ -111,3 +113,16 @@ setInterval(() => {
 	sliderActivefn();
 	style();
 },3000);
+if('serviceWorker' in navigator) {
+  window.addEventListener('load',(e) => {
+    navigator.serviceWorker
+    .register('../sw.js')
+    .then((reg) => {
+      console.log('ServiceWorker registration successful with scope: ', reg.scope);
+    })
+    .catch((err) => {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}

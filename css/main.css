@@ -37,7 +37,6 @@ form input[type=file] {
   right: 0;
   bottom: 0;
   z-index: 99;
-  box-shadow: 0 0 0 calc(var(--size) * 1px) #ccc;
   cursor: pointer;
 }
 form input[type=submit] {
